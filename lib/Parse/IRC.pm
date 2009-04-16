@@ -9,7 +9,7 @@ use strict;
 use warnings;
 use vars qw($VERSION);
 
-$VERSION = '1.12';
+$VERSION = '1.14';
 
 my $g = {
   space			=> qr/\x20+/o,
@@ -181,7 +181,7 @@ Using the module automagically imports 'parse_irc' into your namespace.
 
 =over
 
-=item parse_irc
+=item C<parse_irc>
 
 Takes a string of IRC protcol text. Returns a hashref on success or undef on failure.
 See below for the format of the hashref returned.
@@ -194,7 +194,7 @@ See below for the format of the hashref returned.
 
 =over 
 
-=item new
+=item C<new>
 
 Creates a new Parse::IRC object. One may specify debug => 1 to enable warnings about non-IRC
 protcol lines. Specify public => 1 to enable the automatic conversation of privmsgs targeted at
@@ -206,7 +206,7 @@ channels to 'public' instead of 'privmsg'.
 
 =over 
 
-=item parse
+=item C<parse>
 
 Takes a string of IRC protcol text. Returns a hashref on success or undef on failure.
 The hashref contains the following fields:
@@ -232,13 +232,13 @@ For example, if the filter receives the following line, the following hashref is
 
 =head1 AUTHOR
 
-Chris 'BinGOs' Williams
+Chris C<BinGOs> Williams <chris@bingosnet.co.uk>
 
 Based on code originally developed by Jonathan Steinert
 
 =head1 LICENSE
 
-Copyright C<(c)> Chris Williams and Jonathan Steinert
+Copyright E<copy> Chris Williams and Jonathan Steinert
 
 This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 

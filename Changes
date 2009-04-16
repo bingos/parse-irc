@@ -1,6 +1,11 @@
 Parse::IRC
 ==========
 
+1.14	Thu Apr 16 09:12:38 BST 2009
+	- Update the LICENSE file
+	- Tidy up the POD slightly
+	- Add repository to META.yml
+
 1.12	Mon May  5 08:34:43 BST 2008
 	- Removed Kwalitee test, added license info
 

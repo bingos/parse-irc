@@ -12,4 +12,5 @@ build_requires 'Test::More' => 0.47;
 requires 'strict' => 0;
 requires 'vars' => 0;
 requires 'Exporter' => 0;
+eval "auto_set_repository";
 WriteAll;
