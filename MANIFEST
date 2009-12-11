@@ -3,11 +3,14 @@ examples/simplebot.pl
 examples/sirc.pl
 inc/Module/Install.pm
 inc/Module/Install/AuthorTests.pm
+inc/Module/Install/AutoLicense.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
 inc/Module/Install/Fetch.pm
+inc/Module/Install/GithubMeta.pm
 inc/Module/Install/Makefile.pm
 inc/Module/Install/Metadata.pm
+inc/Module/Install/ReadmeFromPod.pm
 inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 lib/Parse/IRC.pm
@@ -18,5 +21,6 @@ META.yml
 README
 t/00_use.t
 t/01_parse.t
+t/02_dancer.t
 xt/99_pod.t
 xt/99_pod_coverage.t

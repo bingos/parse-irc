@@ -25,7 +25,7 @@ SYNOPSIS
       use IO::Socket;
       use Parse::IRC;
 
-      my $parser = Parse::IRC->new();
+      my $parser = Parse::IRC->new( public => 1 );
 
       my %dispatch = ( 'ping' => \&irc_ping, '001' => \&irc_001, 'public' => \&irc_public );
 
@@ -53,7 +53,6 @@ SYNOPSIS
         my $hashref = $parser->parse( $input );
         SWITCH: {
               my $type = lc $hashref->{command};
-              $type = 'public' if $type eq 'privmsg' and $hashref->{params}->[0] =~ /^#/;
               my @args;
               push @args, $hashref->{prefix} if $hashref->{prefix};
               push @args, @{ $hashref->{params} };
@@ -90,17 +89,20 @@ DESCRIPTION
 FUNCTION INTERFACE
     Using the module automagically imports 'parse_irc' into your namespace.
 
-    parse_irc
+    "parse_irc"
         Takes a string of IRC protcol text. Returns a hashref on success or
         undef on failure. See below for the format of the hashref returned.
 
 OBJECT INTERFACE
   CONSTRUCTOR
-    new Creates a new Parse::IRC object. One may specify debug => 1 to
-        enable warnings about non-IRC protcol lines.
+    "new"
+        Creates a new Parse::IRC object. One may specify debug => 1 to
+        enable warnings about non-IRC protcol lines. Specify public => 1 to
+        enable the automatic conversation of privmsgs targeted at channels
+        to 'public' instead of 'privmsg'.
 
   METHODS
-    parse
+    "parse"
         Takes a string of IRC protcol text. Returns a hashref on success or
         undef on failure. The hashref contains the following fields:
 
@@ -122,9 +124,16 @@ OBJECT INTERFACE
                    }
 
 AUTHOR
-    Chris 'BinGOs' Williams
+    Chris "BinGOs" Williams <chris@bingosnet.co.uk>
 
     Based on code originally developed by Jonathan Steinert
+
+LICENSE
+    Copyright © Chris Williams and Jonathan Steinert
+
+    This module may be used, modified, and distributed under the same terms
+    as Perl itself. Please see the license that came with your Perl
+    distribution for details.
 
 SEE ALSO
     POE::Filter::IRCD

@@ -9,7 +9,7 @@ use strict;
 use warnings;
 use vars qw($VERSION);
 
-$VERSION = '1.14';
+$VERSION = '1.16';
 
 my $g = {
   space			=> qr/\x20+/o,
@@ -36,7 +36,7 @@ my $irc_regex = qr/^
         $g->{'space'}
         [^\x00\x0a\x0d\x20\x3a]
         [^\x00\x0a\x0d\x20]*
-      ){0,13}           # then match on 0-13 of these,
+      )*           # then match on 0-13 of these,
     )
   )?                    # otherwise dont match at all.
   (?:

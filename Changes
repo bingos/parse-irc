@@ -1,6 +1,10 @@
 Parse::IRC
 ==========
 
+1.16  Fri Dec 11 22:05:22 GMT 2009
+  - Ported over a fix from PoFi-IRCD
+  - Tidied up distribution
+
 1.14	Thu Apr 16 09:12:38 BST 2009
 	- Update the LICENSE file
 	- Tidy up the POD slightly
