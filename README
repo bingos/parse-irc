@@ -96,10 +96,12 @@ FUNCTION INTERFACE
 OBJECT INTERFACE
   CONSTRUCTOR
     "new"
-        Creates a new Parse::IRC object. One may specify debug => 1 to
-        enable warnings about non-IRC protcol lines. Specify public => 1 to
-        enable the automatic conversation of privmsgs targeted at channels
-        to 'public' instead of 'privmsg'.
+        Creates a new Parse::IRC object. One may specify "debug => 1" to
+        enable warnings about non-IRC protcol lines. Specify "public => 1"
+        to enable the automatic conversion of privmsgs targeted at channels
+        to "public" instead of "privmsg". Specify "ctcp => 1" to enable
+        automatic conversion of privmsgs and notices with CTCP/DCC type
+        encoding to "ctcp", "ctcpreply" and "dcc_request".
 
   METHODS
     "parse"
@@ -126,10 +128,11 @@ OBJECT INTERFACE
 AUTHOR
     Chris "BinGOs" Williams <chris@bingosnet.co.uk>
 
-    Based on code originally developed by Jonathan Steinert
+    Based on code originally developed by Jonathan Steinert and Dennis
+    Taylor
 
 LICENSE
-    Copyright © Chris Williams and Jonathan Steinert
+    Copyright © Chris Williams, Jonathan Steinert and Dennis Taylor
 
     This module may be used, modified, and distributed under the same terms
     as Perl itself. Please see the license that came with your Perl

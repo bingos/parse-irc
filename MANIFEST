@@ -1,4 +1,5 @@
 Changes
+Changes.old
 examples/simplebot.pl
 examples/sirc.pl
 inc/Module/Install.pm
@@ -22,5 +23,7 @@ README
 t/00_use.t
 t/01_parse.t
 t/02_dancer.t
+t/03_ctcp.t
+tools/git-log.pl
 xt/99_pod.t
 xt/99_pod_coverage.t
