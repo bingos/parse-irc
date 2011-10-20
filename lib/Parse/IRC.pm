@@ -10,7 +10,7 @@ use warnings;
 use File::Basename qw[fileparse];
 use vars qw[$VERSION];
 
-$VERSION = '1.16';
+$VERSION = '1.18';
 
 my $g = {
   space			=> qr/\x20+/o,
