@@ -1,5 +1,7 @@
 package Parse::IRC;
 
+#ABSTRACT: A parser for the IRC protocol.
+
 # We export some stuff
 require Exporter;
 @ISA = qw[Exporter];
@@ -8,9 +10,6 @@ require Exporter;
 use strict;
 use warnings;
 use File::Basename qw[fileparse];
-use vars qw[$VERSION];
-
-$VERSION = '1.18';
 
 my $g = {
   space			=> qr/\x20+/o,
@@ -328,11 +327,7 @@ sub _low_dequote {
 
 q[Operation Blackbriar];
 
-__END__
-
-=head1 NAME
-
-Parse::IRC - A parser for the IRC protocol.
+=pod
 
 =head1 SYNOPSIS
 
@@ -477,17 +472,9 @@ For example, if the filter receives the following line, the following hashref is
 
 =back
 
-=head1 AUTHOR
-
-Chris C<BinGOs> Williams <chris@bingosnet.co.uk>
+=head1 KUDOS
 
 Based on code originally developed by Jonathan Steinert and Dennis Taylor
-
-=head1 LICENSE
-
-Copyright E<copy> Chris Williams, Jonathan Steinert and Dennis Taylor
-
-This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 
 =head1 SEE ALSO
 
