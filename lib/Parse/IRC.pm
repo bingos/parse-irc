@@ -51,7 +51,7 @@ my %dcc_types = (
     qr/^(?:CHAT|SEND)$/ => sub {
         my ($nick, $type, $args) = @_;
         my ($file, $addr, $port, $size);
-        return if !(($file, $addr, $port, $size) = $args =~ /^(".+"|[^ ]+) +(\d+) +(\d+)(?: +(\d+))?/);
+        return if !(($file, $addr, $port, $size) = $args =~ /^(".+"|[^ ]+) +([0-9a-fA-F:]+) +(\d+)(?: +(\d+))?/);
 
         if ($file =~ s/^"//) {
             $file =~ s/"$//;
